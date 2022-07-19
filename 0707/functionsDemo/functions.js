@@ -88,11 +88,22 @@ let htmlContainer = document.getElementById("select-me");
 htmlContainer.appendChild(header);  // this is used to update from a constantly updated server
 
 MOUNTAINS.forEach(function (item) { // this is the class example
+    
     let mountainDiv = document.createElement('div'); 
     let mountainName = document.createTextNode(item.name);
     mountainDiv.appendChild(mountainName);
 
     htmlContainer.appendChild(mountainDiv);
+
+    let heightBar = document.createElement('div');
+    heightBar.className = 'height-bar';
+
+    const displayHeight = item.height/50;
+
+    heightBar.style.width = displayHeight+'px'
+
+    htmlContainer.appendChild(heightBar);
+    
 
     //Create a new 'div' element and assign it to a variable
     //Create a new text node referencing the mountain name (hint: mountain.name) and assign it to a variable
@@ -100,3 +111,4 @@ MOUNTAINS.forEach(function (item) { // this is the class example
     //use appendChild to append the new text node to the new div (which you can reference as the variable you assigned it to)
     //use appendChild to append the new div to htmlContainer (hint: already assigned as a variable above, outside the forEach loop)
 });
+console.log('i am text')
