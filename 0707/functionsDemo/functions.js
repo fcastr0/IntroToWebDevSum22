@@ -80,14 +80,20 @@ const MOUNTAINS = [
     { name: "Mont Blanc", height: 4808, place: "Italy/France" }
 ];
 
-let header = document.createElement('h1');
+let header = document.createElement('h1'); 
 let title = document.createTextNode("Mountains");
 header.appendChild(title);
 
 let htmlContainer = document.getElementById("select-me");
-htmlContainer.appendChild(header);
+htmlContainer.appendChild(header);  // this is used to update from a constantly updated server
 
-MOUNTAINS.forEach(function (mountain) {
+MOUNTAINS.forEach(function (item) { // this is the class example
+    let mountainDiv = document.createElement('div'); 
+    let mountainName = document.createTextNode(item.name);
+    mountainDiv.appendChild(mountainName);
+
+    htmlContainer.appendChild(mountainDiv);
+
     //Create a new 'div' element and assign it to a variable
     //Create a new text node referencing the mountain name (hint: mountain.name) and assign it to a variable
 
