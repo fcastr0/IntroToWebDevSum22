@@ -105,8 +105,6 @@ MOUNTAINS.forEach(function (item) { // this is the class example
     htmlContainer.appendChild(heightBar);
     
 
-<<<<<<< HEAD
-=======
 
 MOUNTAINS.forEach(function (item) {
     
@@ -126,11 +124,10 @@ MOUNTAINS.forEach(function (item) {
     htmlContainer.appendChild(heightBar);
 
 
->>>>>>> upstream/main
     //Create a new 'div' element and assign it to a variable
     //Create a new text node referencing the mountain name (hint: mountain.name) and assign it to a variable
 
     //use appendChild to append the new text node to the new div (which you can reference as the variable you assigned it to)
     //use appendChild to append the new div to htmlContainer (hint: already assigned as a variable above, outside the forEach loop)
 });
-console.log('i am text')
+})
