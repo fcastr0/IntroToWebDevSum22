@@ -105,6 +105,28 @@ MOUNTAINS.forEach(function (item) { // this is the class example
     htmlContainer.appendChild(heightBar);
     
 
+<<<<<<< HEAD
+=======
+
+MOUNTAINS.forEach(function (item) {
+    
+    let mountainDiv = document.createElement('div');
+    let mountainName = document.createTextNode(item.name);
+    mountainDiv.appendChild(mountainName);
+
+    htmlContainer.appendChild(mountainDiv);
+
+    let heightBar = document.createElement('div');
+    heightBar.className = "height-bar";
+
+    const displayHeight = item.height/50;
+
+    heightBar.style.width = displayHeight+"px";
+
+    htmlContainer.appendChild(heightBar);
+
+
+>>>>>>> upstream/main
     //Create a new 'div' element and assign it to a variable
     //Create a new text node referencing the mountain name (hint: mountain.name) and assign it to a variable
 
